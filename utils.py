@@ -78,12 +78,19 @@ def search(lst, target):
             low = mid + 1
     return found
 
+def is_sorted(lst):
+    for i in range(len(lst) - 1):
+        if lst[i] > lst[i + 1]:
+            return False
+    return True
+
 """
 Some test cases for the sort and search functions
 """
 def main():
     a = [5, 7, 1, 8, 3]
     print(largest(a))
+    print(f"Is the list sorted: {is_sorted(a)}")
     sort(a, True)
     print(a)
     print(search(a, 7))

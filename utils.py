@@ -19,9 +19,9 @@ Sorts ascending if "asc" is True, and descending if it is False.
 def sort(lst, asc):
     for i in range(len(lst)):
         if asc:
-            idx = find_smallest(lst, i)
+            idx = findSmallest(lst, i)
         else:
-            idx = find_largest(lst, i)
+            idx = findLargest(lst, i)
         swap(lst, i, idx)
     return lst
 
@@ -29,7 +29,7 @@ def sort(lst, asc):
 Helper function to find the largest element in the list starting
 at index "start"
 """
-def find_largest(lst, start):
+def findLargest(lst, start):
     max = lst[start]
     idx = start
     for i in range(start, len(lst)):
@@ -42,7 +42,7 @@ def find_largest(lst, start):
 Helper function to find the smallest element in the list starting
 at index "start"
 """
-def find_smallest(lst, start):
+def findSmallest(lst, start):
     max = lst[start]
     idx = start
     for i in range(start, len(lst)):

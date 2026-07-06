@@ -32,7 +32,7 @@ at index "start"
 def find_largest(lst, start):
     max = lst[start]
     idx = start
-    for i in range(start, len(lst)):
+    for i in range(start+1, len(lst)):
         if lst[i] > max:
             max = lst[i]
             idx = i
@@ -45,7 +45,7 @@ at index "start"
 def find_smallest(lst, start):
     max = lst[start]
     idx = start
-    for i in range(start, len(lst)):
+    for i in range(start+1, len(lst)):
         if lst[i] < max:
             max = lst[i]
             idx = i

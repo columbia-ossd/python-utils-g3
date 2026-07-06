@@ -59,6 +59,21 @@ def swap(lst, a, b):
     lst[a] = lst[b]
     lst[b] = tmp
 
+"""
+Returns the average of the numerical values in the list.
+Ignores values that are not numbers, and returns 0 if there are none.
+"""
+def average(lst):
+    total = 0
+    count = 0
+    for value in lst:
+        if isinstance(value, (int, float)):
+            total += value
+            count += 1
+    if count == 0:
+        return 0
+    return total / count
+
 
 """
 Function to determine whether a list contains a target value
@@ -74,7 +89,7 @@ def search(lst, target):
             found = True
         elif (lst[mid] > target):
             high = mid - 1
-        elif (lst[mid] < target):
+        else:
             low = mid + 1
     return found
 

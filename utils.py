@@ -6,11 +6,7 @@ A collection of utilities for working with lists.
 Finds the largest value in the list.
 """
 def largest(lst):
-    max = lst[0]
-    for i in range(1, len(lst)):
-        if lst[i] > max:
-            max = lst[i]
-    return max
+    return findLargest(lst, 0)
 
 """
 Sorts the list according to the "natural order" of the values.
